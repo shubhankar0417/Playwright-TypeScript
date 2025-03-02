@@ -1,0 +1,20 @@
+{
+    "user1" : {
+        "firstname" : "Tester177",
+        "lastname" : "Playwright",
+        "email" : "testplaywright@gmail.com",
+        "mobile" : "123456789",
+        "password" : "Test@123"
+    },
+    "user2" : {
+        "firstname" : "Tester178",
+        "lastname" : "Playwright",
+        "email" : "testplaywright1@gmail.com",
+        "mobile" : "123456789",
+        "password" : "Test@123"
+    },
+    "herokuUser" : {
+        "username": "admin",
+        "password": "admin"
+    }
+}
