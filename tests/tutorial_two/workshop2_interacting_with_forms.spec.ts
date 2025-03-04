@@ -1,6 +1,6 @@
 import  { test, expect } from "playwright/test";
 
-test.only('Automating form submission', async ({page}) => {
+test('Automating form submission', async ({page}) => {
     await page.goto('https://demo.playwright.dev/todomvc/#/');
     const toDo = page.getByPlaceholder('What needs to be done?');
     await toDo.fill('Task 1');
