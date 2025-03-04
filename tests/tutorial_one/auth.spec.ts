@@ -1,7 +1,7 @@
 import { test, Browser, BrowserContext, Page } from "playwright/test";
 import { chromium, webkit, firefox } from "playwright/test";
 
-test.only('basic authentication', async () => {
+test('basic authentication', async () => {
     const url = 'https://the-internet.herokuapp.com/basic_auth';
     const browser:Browser = await chromium.launch({ headless: false });
     const context:BrowserContext = await browser.newContext();
