@@ -16,3 +16,14 @@ test('Automating form submission', async ({page}) => {
     await expect(secondToDo).not.toBeChecked();
     await page.waitForTimeout(3000);
 })
+
+test('Handling form', async ({page}) => {
+    await page.goto('https://demo.playwright.dev/todomvc/#/');
+    const placeholder = '[placeholder="What needs to be done?"]';
+    await page.fill(placeholder, 'John doe');
+    await page.locator(placeholder).press('Enter');
+    await page.waitForTimeout(5000);
+    const checkbox = page.locator('.toggle');
+    await checkbox.check();
+    await page.waitForTimeout(5000);
+})

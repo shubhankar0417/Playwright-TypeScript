@@ -8,7 +8,7 @@ test('Upload single and multiple files', async() => {
 
     // upload a single file and deselect it
     await page.goto('https://practice.expandtesting.com/upload');
-    const filePath = path.join(__dirname, '..' ,'testData/uploadFile1.txt');
+    const filePath = path.join(__dirname, '..' ,'..', 'testData/uploadFile1.txt');
     const chooseFileButton = page.locator('//input[@type="file"]');
     const uploadButton = page.locator('button#fileSubmit');
     await chooseFileButton.setInputFiles(filePath);
