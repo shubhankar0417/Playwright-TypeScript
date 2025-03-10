@@ -8,7 +8,7 @@ test('Upload single and multiple files', async() => {
 
     // upload a single file and deselect it
     await page.goto('https://practice.expandtesting.com/upload');
-    const filePath = path.join(__dirname, '..' ,'..', 'testData/uploadFile1.txt');
+    const filePath = path.join(__dirname, '..' ,'..', 'testData/workshop1/uploadFile1.txt');
     const chooseFileButton = page.locator('//input[@type="file"]');
     const uploadButton = page.locator('button#fileSubmit');
     await chooseFileButton.setInputFiles(filePath);
@@ -33,13 +33,13 @@ test('Upload single and multiple files', async() => {
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
     const multipleUploadButton = page.locator('input[name="filesToUpload"]');
     await multipleUploadButton.setInputFiles([
-        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/uploadFiles/a.txt'),
-        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/uploadFiles/b.txt')
+        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/workshop1/uploadFiles/a.txt'),
+        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/workshop1/uploadFiles/b.txt')
     ]);
 
     // deselect some or all files
     await multipleUploadButton.setInputFiles([
-        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/uploadFiles/b.txt')
+        path.join('/Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/workshop1/uploadFiles/b.txt')
     ]);
     await page.waitForTimeout(3000);
     

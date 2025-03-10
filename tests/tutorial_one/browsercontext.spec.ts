@@ -1,6 +1,6 @@
 import { test, Browser, BrowserContext } from "playwright/test";
 import { webkit, firefox, chromium } from "playwright/test";
-import users from "../../testData/userdata.json";
+import users from "../../testData/workshop1/userdata.json";
 
 test('set browser context for two users', async() => {
 

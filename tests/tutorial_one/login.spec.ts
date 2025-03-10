@@ -1,6 +1,6 @@
 import { test, expect, Browser, Page } from '@playwright/test'
 import { webkit, firefox, chromium } from '@playwright/test' 
-import users from "../../testData/userdata.json"
+import users from "../../testData/workshop1/userdata.json"
 
 // create a test block 
 test('login test', async() => {
