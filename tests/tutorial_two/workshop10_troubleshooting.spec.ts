@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.only('Capture screeshot on failure', async ({ page }) => {
+test('Capture screeshot on failure', async ({ page }) => {
     await page.goto('https://demo.playwright.dev/todomvc/');
     const flaky = Math.random() < 0.5;
     console.log(`Flaky value :${flaky}`);
