@@ -6,7 +6,7 @@ test.describe('Typescript varibales and types', async() => {
         age: '#age',
         student: '#isStudent'
     }
-    test.only('Typescript variables and their types working', async({page})=> {
+    test('Typescript variables and their types working', async({page})=> {
         await page.goto('file:////Users/shubhankar/Desktop/Programming/Automation/Playwright-Typescript/testData/workshop7/index.html')
         let firstname: string = 'Shubhankar';
         let age: number = 30;
@@ -20,7 +20,7 @@ test.describe('Typescript varibales and types', async() => {
         await page.waitForTimeout(2000);
     })
 
-    test.only('Type definition and interfaces', async({page}) => {
+    test('Type definition and interfaces', async({page}) => {
         type User = {
             firstName: string,
             age: number,
